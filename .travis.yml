@@ -35,7 +35,7 @@ addons:
   apt:
     packages:
       - make
-      - gcc-multilib
+      #- gcc-multilib
       - libpcap0.8
       - libpcap0.8-dev
 
@@ -50,3 +50,6 @@ script:
   - make
   - ./xl2tpd-control --version
   - ./xl2tpd-control --help
+  
+install:
+  - sudo apt-get install -y gcc-multilib
